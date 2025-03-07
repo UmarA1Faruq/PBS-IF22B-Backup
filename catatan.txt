@@ -1,5 +1,10 @@
-# Pertemuan 3 Maret
+# Pertemuan 3 Maret 2025
 - Instalasi Next js
 - Instalasi Prisma
+- Membuat model tb_user
 
+# Pertemuan 7 Maret 2025
+- Menambahkan data dalam tb_user
+- Membuat url desain agar mudah dibaca (/api/)
+- menambahkan folder user dan file route.ts
 
