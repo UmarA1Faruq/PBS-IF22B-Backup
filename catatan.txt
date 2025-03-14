@@ -18,4 +18,6 @@
 
 - menambahkan meta_data & data_user
 - membuat kondisi jika data tidak ditemukan
-- 
+
+# Pertemuan 14 Maret 2025
+- Belajar Published POSTMAN
