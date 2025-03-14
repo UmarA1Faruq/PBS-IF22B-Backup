@@ -8,3 +8,14 @@
 - Membuat url desain agar mudah dibaca (/api/)
 - menambahkan folder user dan file route.ts
 
+# Pertemuan 10 Maret 2025
+- Penjelasan format json
+[
+{
+(paer)-baris    "id"(key) = 1,(value)
+}(objek)
+](array)
+
+- menambahkan meta_data & data_user
+- membuat kondisi jika data tidak ditemukan
+- 
