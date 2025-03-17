@@ -44,9 +44,9 @@ export const POST = async (request:NextRequest) => {
     // proses POST data
     const save = await prisma.tb_user.create({
         data: {
-            name: 'nama_value',
-            username: 'username_value',
-            password: 'password_value',
+            name: nama_value,
+            username: username_value,
+            password: password_value
           }
     })
 
