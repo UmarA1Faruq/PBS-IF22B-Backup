@@ -21,3 +21,13 @@
 
 # Pertemuan 14 Maret 2025
 - Belajar Published POSTMAN
+- POST di POSTMAN
+
+# Pertemuan 17 Maret 2025
+- Libur Hujan
+
+# Pertemuan 21 Maret 2025
+- instal bcrypt
+- Enkripsi Password
+- Membuat username unik
+

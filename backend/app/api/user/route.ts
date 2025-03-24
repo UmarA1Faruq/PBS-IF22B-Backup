@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
+import { genSaltSync, hashSync } from "bcrypt-ts";
 
 // buat variabel prisma
 const prisma = new PrismaClient
@@ -41,12 +42,38 @@ export const POST = async (request:NextRequest) => {
     //  buat variabel object untuk request
     const {nama_value, username_value, password_value} = await request.json()
 
+    // cek apakah username sudah pernah dibuat / belum
+    const checkUsername = await prisma.tb_user.findMany({
+        where:{
+            username: username_value
+        }
+    })
+
+    // Jika username ditemukan
+    if(checkUsername.length >=1)
+    {
+        return NextResponse.json({
+            meta_data:{
+                error: 1,
+                message: "Data User Gagal Disimpan! Username Sudah Terdaftar!",
+                status: 404
+            },
+        },{
+            status: 404
+        })
+    }
+
+
+    // Penambahan bcrypt
+    const password_salt = genSaltSync(10);
+    const password_result = hashSync(password_value, password_salt);
+
     // proses POST data
     const save = await prisma.tb_user.create({
         data: {
             name: nama_value,
             username: username_value,
-            password: password_value
+            password: password_result
           }
     })
 
