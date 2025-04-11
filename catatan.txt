@@ -38,3 +38,10 @@
 - membuat logika atau kondisi jika data tidak ditemukan
 
 # Pertemuan 11 April 2025
+- Penjelasan untuk tugas akhir
+- Teknologi yang diggunakan : Next Js 
+- Membuat Service GET detail data tb_user didalam route.ts [id]
+- Menambahkan codemod untuk refatoring code otomatis :
+  npx @next/codemod@canary next-async-request-api .
+  npx @next/codemod@canary next-async-request-api --force
+
