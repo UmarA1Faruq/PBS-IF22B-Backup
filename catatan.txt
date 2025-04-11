@@ -31,3 +31,10 @@
 - Enkripsi Password
 - Membuat username unik
 
+# Pertemuan
+- membuat folder baru dalam user [id] kemudian membuat file route.ts didalam nya
+- Membuat mekanisme hapus data tb_user
+- membuat HAPUS DATA USER di Postman
+- membuat logika atau kondisi jika data tidak ditemukan
+
+# Pertemuan 11 April 2025
