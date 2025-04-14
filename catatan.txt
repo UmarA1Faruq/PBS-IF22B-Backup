@@ -45,3 +45,5 @@
   npx @next/codemod@canary next-async-request-api .
   npx @next/codemod@canary next-async-request-api --force
 
+# Pertemuan 14 April 2025
+- Membuat service PUT didalam [id]
