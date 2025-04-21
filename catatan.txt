@@ -57,5 +57,11 @@
 daisyUI : npm i -D daisyui@latest
 axios   : npm i axios
 swr     : npm i swr
+fontawosome : 
+1. npm i --save @fortawesome/fontawesome-svg-core 
+2. npm i --save @fortawesome/free-solid-svg-icons
+   npm i --save @fortawesome/free-regular-svg-icons
+   npm i --save @fortawesome/free-brands-svg-icons
+3. npm i --save @fortawesome/react-fontawesome@latest
 
 - edit global.css menambahkan @plugin "daisyui";
