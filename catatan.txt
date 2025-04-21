@@ -51,6 +51,10 @@
 
 # Pertemuan 21 April 2025
 - Mulai masuk ke bagian Frontend
-- 
+- Instalasi awal frontend
+ : npx create-next-app@latest
+- Instalasi daisyUI untuk template desain, axios untuk komunikasi api, untuk live data, fontawosome untuk icon
+daisyUI : npm i -D daisyui@latest
 
 
+- edit global.css menambahkan @plugin "daisyui";
