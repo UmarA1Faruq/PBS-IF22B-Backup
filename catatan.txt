@@ -47,3 +47,10 @@
 
 # Pertemuan 14 April 2025
 - Membuat service PUT didalam [id]
+- 
+
+# Pertemuan 21 April 2025
+- Mulai masuk ke bagian Frontend
+- 
+
+
