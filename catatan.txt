@@ -53,8 +53,9 @@
 - Mulai masuk ke bagian Frontend
 - Instalasi awal frontend
  : npx create-next-app@latest
-- Instalasi daisyUI untuk template desain, axios untuk komunikasi api, untuk live data, fontawosome untuk icon
+- Instalasi daisyUI untuk template desain, axiosTS untuk komunikasi api, swr untuk live data, fontawosome untuk icon
 daisyUI : npm i -D daisyui@latest
-
+axios   : npm i axios
+swr     : npm i swr
 
 - edit global.css menambahkan @plugin "daisyui";
