@@ -23,11 +23,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="retro">
+    <html lang="en" data-theme="coffee">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Buat Header  */}
+        <header>
+
+        </header>
+
+        {/* Buat Content  */}
+        <main>
         {children}
+        </main>
+
+        {/* Buat footer */}
+        <footer>
+          Copyright &copy; 2025 - IF 22 B
+        </footer>
+
       </body>
     </html>
   );

@@ -65,3 +65,7 @@ fontawosome :
 3. npm i --save @fortawesome/react-fontawesome@latest
 
 - edit global.css menambahkan @plugin "daisyui";
+
+# Pertemuan 25 April 2025
+- Mulai editing frontend
+- 
