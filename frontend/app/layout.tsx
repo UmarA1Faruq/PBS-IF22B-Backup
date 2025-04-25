@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
       >
         {/* Buat Header  */}
         <header>
+          <Image src={"/images/logo.png"} width={320} height={60} alt="Logo UTI"></Image>
 
         </header>
 
