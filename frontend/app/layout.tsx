@@ -24,14 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="coffee">
+    <html lang="en" data-theme="corporate">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Buat Header  */}
         <header>
           <Image src={"/images/logo.png"} width={320} height={60} alt="Logo UTI"></Image>
-
         </header>
 
         {/* Buat Content  */}
@@ -40,7 +39,7 @@ export default function RootLayout({
         </main>
 
         {/* Buat footer */}
-        <footer>
+        <footer className="text-center">
           Copyright &copy; 2025 - IF 22 B
         </footer>
 

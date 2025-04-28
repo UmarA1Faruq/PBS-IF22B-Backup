@@ -1,7 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake, retro, coffee;
+  themes: light --default, dark --prefersdark, cupcake, corporate, coffee;
 };
+
+:root {
+  font-size: 1em;
+}
 
 /* :root {
   --background: #ffffff;

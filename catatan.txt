@@ -68,4 +68,7 @@ fontawosome :
 
 # Pertemuan 25 April 2025
 - Mulai editing frontend
+- Membuat tampilan awal frontend
+
+# Pertemuan 28 April 2025
 - 
