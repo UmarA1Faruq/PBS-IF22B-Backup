@@ -14,24 +14,24 @@ export default function Home() {
       </section>
 
       {/* buat table data user */}
-      <section className="overflow-x-auto">
+      <section className="overflow-x-auto mt-5">
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+            <tr className="text-center">
+              <th className="w-1/12">Aksi</th>
+              <th className="w-5/12">Name</th>
+              <th className="w-3/12">Username</th>
+              <th className="w-3/12">Password</th>
             </tr>
           </thead>
           <tbody>          
             {/* row 2 */}
             <tr className="hover:bg-cyan-100">
-              <td>2</td>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
-              <td>Purple</td>
+              <td className="text-center">2</td>
+              <td className="text-justify">Hart Hagerty</td>
+              <td className="text-center">Desktop Support Technician</td>
+              <td className="text-center">Purple</td>
             </tr>
           </tbody>
         </table>
