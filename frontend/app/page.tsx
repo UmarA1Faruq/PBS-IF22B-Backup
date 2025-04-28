@@ -1,10 +1,19 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useSWR from "swr";
 
+// definisikan variabel "fatcher"
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
+  const { data, error, isLoading } = useSWR(
+    "http://localhost:3001/api/user",
+    fetcher
+  );
+  
   return (
     <div>
       {/* buat tombol "Tambah Data" */}
@@ -25,14 +34,20 @@ export default function Home() {
               <th className="w-3/12">Password</th>
             </tr>
           </thead>
-          <tbody>          
-            {/* row 2 */}
+          <tbody>
+            {/* looping dengan "map" */}
+            {data?.data_user.map((item: any) => (
+
+            {/* row */}
             <tr className="hover:bg-cyan-100">
               <td className="text-center">2</td>
               <td className="text-justify">Hart Hagerty</td>
               <td className="text-center">Desktop Support Technician</td>
               <td className="text-center">Purple</td>
             </tr>
+            ))}
+
+
           </tbody>
         </table>
 

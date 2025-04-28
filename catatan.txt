@@ -71,4 +71,6 @@ fontawosome :
 - Membuat tampilan awal frontend
 
 # Pertemuan 28 April 2025
-- 
+- editing tabel frontend
+- menambahkan variabel swr
+- menambahakn looping dengan map
