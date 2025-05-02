@@ -74,3 +74,9 @@ fontawosome :
 - editing tabel frontend
 - menambahkan variabel swr
 - menambahakn looping dengan map
+
+# Pertemuan 02 Mey 2025
+- Fix Error kemarin (map)
+- Penjelasan Tentang CROS
+- megcopas file middleware.ts untuk akses, taruh di server(backend)
+- 

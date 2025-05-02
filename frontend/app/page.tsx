@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
@@ -37,13 +39,12 @@ export default function Home() {
           <tbody>
             {/* looping dengan "map" */}
             {data?.data_user.map((item: any) => (
-
-            {/* row */}
-            <tr className="hover:bg-cyan-100">
-              <td className="text-center">2</td>
-              <td className="text-justify">Hart Hagerty</td>
-              <td className="text-center">Desktop Support Technician</td>
-              <td className="text-center">Purple</td>
+              
+            <tr className="hover:bg-cyan-100" key={item.id}>
+              <td className="text-center"></td>
+              <td className="text-justify">{item.name}</td>
+              <td className="text-center">{item.username}</td>
+              <td className="text-center">{item.password}</td>
             </tr>
             ))}
 
