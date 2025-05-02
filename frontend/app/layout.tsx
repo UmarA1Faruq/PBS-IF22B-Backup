@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         {/* Buat Header  */}
         <header>
-          <Image src={"/images/logo.png"} width={320} height={60} alt="Logo UTI"></Image>
+          <Image src={"/images/logo.png"} width={320} height={60} alt="Logo UTI" priority></Image>
         </header>
 
         {/* Buat Content  */}
