@@ -14,7 +14,7 @@ import useSWR from "swr";
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
-  const { data, error, isLoading } = useSWR(
+  const { data, error, isLoading, mutate } = useSWR(
     "http://localhost:3001/api/user",
     fetcher
   );
@@ -22,7 +22,9 @@ export default function Home() {
   // buat response service "delete" dengan axios
   const deleteDataUser = async(id: string) => {
     const response = await axios.delete(`http://localhost:3001/api/user/${id}`)
-    alert("Data Terhapus")
+    // refresh data
+    mutate(data)
+    alert(response.data.meta_data.message)
   }
 
   return (
@@ -60,11 +62,12 @@ export default function Home() {
                 <td className="text-center">
                   {/* buat tombol edit dan hapus */}
                   <Link href={"/"} 
-                  className="bg-blue-500 px-2.5 py-1.5 text-white" 
-                  onClick={()=>{deleteDataUser(item.id)}}>
+                  className="bg-blue-500 px-2.5 py-1.5 text-white">
                     <FontAwesomeIcon icon={faPencil} />
                   </Link>
-                  <Link href={"/"} className="bg-rose-500 px-2.5 py-1.5 text-white">
+                  <Link href={"/"} 
+                  className="bg-rose-500 px-2.5 py-1.5 text-white"
+                  onClick={()=>{deleteDataUser(item.id)}}>
                   <FontAwesomeIcon icon={faTrash} />
                   </Link>
                 </td>
