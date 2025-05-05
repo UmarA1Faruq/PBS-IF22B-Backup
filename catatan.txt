@@ -75,10 +75,12 @@ fontawosome :
 - menambahkan variabel swr
 - menambahakn looping dengan map
 
-# Pertemuan 02 Mey 2025
+# Pertemuan 02 Mei 2025
 - Fix Error kemarin (map)
 - Penjelasan Tentang CROS
 - megcopas file middleware.ts untuk akses, taruh di server(backend)
 - membuat tombol edit dan delete
 - update style css untuk tombol
-- 
+
+# Pertemuan 05 Mei 2025
+- Belajar terneri oprator

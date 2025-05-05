@@ -6,6 +6,7 @@
 import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 import Link from "next/link";
 import useSWR from "swr";
 
@@ -17,6 +18,12 @@ export default function Home() {
     "http://localhost:3001/api/user",
     fetcher
   );
+
+  // buat response service "delete" dengan axios
+  const deleteDataUser = async(id: string) => {
+    const response = await axios.delete(`http://localhost:3001/api/user/${id}`)
+    alert("Data Terhapus")
+  }
 
   return (
     <div>
@@ -40,12 +47,21 @@ export default function Home() {
           </thead>
           <tbody>
             {/* looping dengan "map" */}
-            {data?.data_user.map((item: any) => (
+            {(data?.meta_data.error == 1) ?
+            <tr>
+              <td colSpan={5} className="text-center">
+                {data.meta_data.message}
+              </td>
+            </tr>
+            :
+            data?.data_user.map((item: any) => (
 
               <tr className="hover:bg-cyan-100" key={item.id}>
                 <td className="text-center">
                   {/* buat tombol edit dan hapus */}
-                  <Link href={"/"} className="bg-blue-500 px-2.5 py-1.5 text-white">
+                  <Link href={"/"} 
+                  className="bg-blue-500 px-2.5 py-1.5 text-white" 
+                  onClick={()=>{deleteDataUser(item.id)}}>
                     <FontAwesomeIcon icon={faPencil} />
                   </Link>
                   <Link href={"/"} className="bg-rose-500 px-2.5 py-1.5 text-white">
