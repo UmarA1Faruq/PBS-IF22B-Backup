@@ -3,8 +3,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
+import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import useSWR from "swr";
 
 // definisikan variabel "fatcher"
@@ -15,13 +17,13 @@ export default function Home() {
     "http://localhost:3001/api/user",
     fetcher
   );
-  
+
   return (
     <div>
       {/* buat tombol "Tambah Data" */}
       <section className="text-right">
         <button className="btn btn-soft btn-success">
-          <FontAwesomeIcon icon={faPlus}/>Tambah Data</button>
+          <FontAwesomeIcon icon={faPlus} />Tambah Data</button>
       </section>
 
       {/* buat table data user */}
@@ -30,8 +32,8 @@ export default function Home() {
           {/* head */}
           <thead>
             <tr className="text-center">
-              <th className="w-1/12">Aksi</th>
-              <th className="w-5/12">Name</th>
+              <th className="w-2/12">Aksi</th>
+              <th className="w-4/12">Name</th>
               <th className="w-3/12">Username</th>
               <th className="w-3/12">Password</th>
             </tr>
@@ -39,13 +41,21 @@ export default function Home() {
           <tbody>
             {/* looping dengan "map" */}
             {data?.data_user.map((item: any) => (
-              
-            <tr className="hover:bg-cyan-100" key={item.id}>
-              <td className="text-center"></td>
-              <td className="text-justify">{item.name}</td>
-              <td className="text-center">{item.username}</td>
-              <td className="text-center">{item.password}</td>
-            </tr>
+
+              <tr className="hover:bg-cyan-100" key={item.id}>
+                <td className="text-center">
+                  {/* buat tombol edit dan hapus */}
+                  <Link href={"/"} className="bg-blue-500 px-2.5 py-1.5 text-white">
+                    <FontAwesomeIcon icon={faPencil} />
+                  </Link>
+                  <Link href={"/"} className="bg-rose-500 px-2.5 py-1.5 text-white">
+                  <FontAwesomeIcon icon={faTrash} />
+                  </Link>
+                </td>
+                <td className="text-justify">{item.name}</td>
+                <td className="text-center">{item.username}</td>
+                <td className="text-center">{item.password}</td>
+              </tr>
             ))}
 
 
