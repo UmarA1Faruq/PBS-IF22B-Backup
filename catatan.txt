@@ -84,3 +84,7 @@ fontawosome :
 
 # Pertemuan 05 Mei 2025
 - Belajar terneri oprator
+
+# Pertemuan 23 Mei 2025
+- Lanjut membuat oprasi add (tambah data)
+- Membuat folder add dalam frontend dan membuat file page.jsx didalamnya
