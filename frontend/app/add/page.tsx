@@ -1,7 +1,15 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+"use client"
+
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function AddPage() {
+    // buat hook "useState" untuk visible/hidden pesan error
+    const [errorNamaVisible, setErrorNamaVisible] = useState(false)
+    const [errorUsernamaVisible, setErrorUseramaVisible] = useState(false)
+    const [errorPasswordVisible, setErrorPasswordVisible] = useState(false)
+
     return (
         <div className='bg-amber-300'>
         <fieldset className="fieldset">
