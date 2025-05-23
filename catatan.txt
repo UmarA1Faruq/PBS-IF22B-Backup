@@ -88,3 +88,4 @@ fontawosome :
 # Pertemuan 23 Mei 2025
 - Lanjut membuat oprasi add (tambah data)
 - Membuat folder add dalam frontend dan membuat file page.jsx didalamnya
+- Membuat layout dasar dari tambah data
