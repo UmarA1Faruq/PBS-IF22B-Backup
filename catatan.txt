@@ -89,3 +89,7 @@ fontawosome :
 - Lanjut membuat oprasi add (tambah data)
 - Membuat folder add dalam frontend dan membuat file page.jsx didalamnya
 - Membuat layout dasar dari tambah data
+- Membuat hook untuk visible dan hidden pesan error
+- Menerapkan useState hook kedalam pesan error
+- Membuat fungsi untuk simpan data
+- Membuat usRef untuk isisan data komponen
