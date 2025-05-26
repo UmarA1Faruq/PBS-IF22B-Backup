@@ -71,6 +71,11 @@ export default function AddPage() {
             })
                 .then(function (response) {
                     alert(response.data.meta_data.message);
+
+                    if (response.data.meta_data.error == 0) {
+                        //location.href = `/add`
+                        location.reload();
+                    }
                 })
         }
     };
