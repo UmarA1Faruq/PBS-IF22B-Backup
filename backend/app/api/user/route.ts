@@ -59,7 +59,7 @@ export const POST = async (request:NextRequest) => {
                 status: 404
             },
         },{
-            status: 404
+            status: 200
         })
     }
 

@@ -70,7 +70,7 @@ export default function AddPage() {
                 password_value: dataPassword.current?.value,
             })
                 .then(function (response) {
-                    console.log(response);
+                    alert(response.data.meta_data.message);
                 })
         }
     };
