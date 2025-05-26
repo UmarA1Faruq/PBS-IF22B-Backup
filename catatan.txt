@@ -96,4 +96,6 @@ fontawosome :
 
 # Pertemuan 26 Mei 2025
 - Lanjut untuk useRef pada komponen Username dan Password
+- Mengambil service "POST"
+- Menambahkan Axios sebagai service
 - 

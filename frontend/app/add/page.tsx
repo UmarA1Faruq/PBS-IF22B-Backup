@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
+import axios from 'axios'
 import Link from 'next/link'
 import React, { useRef, useState } from 'react'
 
@@ -21,55 +22,56 @@ export default function AddPage() {
     const setSaveData = () => {
         // Cek apakah semuah komponen sudah terisi
         // jika komponen "nama" tidak diisi
-        if(dataNama.current?.value == "")
-        {
+        if (dataNama.current?.value == "") {
             // tampilkan pesan error
             setErrorNamaVisible(true)
         }
         // jika komponen "nama" diisi
-        else
-        {
+        else {
             // sembunyikan pesan error
             setErrorNamaVisible(false)
 
         }
 
         // Untuk data Username
-        if(dataUsername.current?.value == "")
-        {
+        if (dataUsername.current?.value == "") {
             // tampilkan pesan error
             setErrorUsernameVisible(true)
         }
         // jika komponen "Usernama" diisi
-        else
-        {
+        else {
             // sembunyikan pesan error
             setErrorUsernameVisible(false)
 
         }
 
         // Untuk Paswword
-        if(dataPassword.current?.value == "")
-        {
+        if (dataPassword.current?.value == "") {
             // tampilkan pesan error
             setErrorPasswordVisible(true)
         }
         // jika komponen "Password" diisi
-        else
-        {
+        else {
             // sembunyikan pesan error
             setErrorPasswordVisible(false)
 
         }
 
         // jiks seluruh komponen terisi
-        if(
-            dataNama.current?.value != "" && 
-            dataUsername.current?.value != "" && 
+        if (
+            dataNama.current?.value != "" &&
+            dataUsername.current?.value != "" &&
             dataPassword.current?.value != ""
-        ){
+        ) {
             // ambil service "POST"
-            alert("Simpan")
+            axios.post(`http://localhost:3001/api/user`, {
+                nama_value: dataNama.current?.value,
+                username_value: dataUsername.current?.value,
+                password_value: dataPassword.current?.value,
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
         }
     };
 
@@ -102,12 +104,12 @@ export default function AddPage() {
                 }
             </fieldset>
 
-            <button className="btn btn-active btn-success ml-5 mr-2.5 mt-5 w-24" 
-            onClick={setSaveData}>
-            Simpan
+            <button className="btn btn-active btn-success ml-5 mr-2.5 mt-5 w-24"
+                onClick={setSaveData}>
+                Simpan
             </button>
             <Link href={"/"} className="btn btn-error ml-2.5 mt-5 w-24">
-            Batal
+                Batal
             </Link>
         </div>
     )
