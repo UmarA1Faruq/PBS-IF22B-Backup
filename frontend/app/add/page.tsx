@@ -61,7 +61,17 @@ export default function AddPage() {
             setErrorPasswordVisible(false)
 
         }
-    }
+
+        // jiks seluruh komponen terisi
+        if(
+            dataNama.current?.value != "" && 
+            dataUsername.current?.value != "" && 
+            dataPassword.current?.value != ""
+        ){
+            // ambil service "POST"
+            alert("Simpan")
+        }
+    };
 
     return (
         <div className='bg-amber-300'>
