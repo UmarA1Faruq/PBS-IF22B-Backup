@@ -7,11 +7,15 @@ import React, { useRef, useState } from 'react'
 export default function AddPage() {
     // buat hook "useState" untuk visible/hidden pesan error
     const [errorNamaVisible, setErrorNamaVisible] = useState(false)
-    const [errorUsernamaVisible, setErrorUseramaVisible] = useState(false)
+    const [errorUsernamaVisible, setErrorUsernameVisible] = useState(false)
     const [errorPasswordVisible, setErrorPasswordVisible] = useState(false)
 
     // buat hook "useRef" untuk komponen isian
     const dataNama = useRef<HTMLInputElement>(null)
+    const dataUsername = useRef<HTMLInputElement>(null)
+    const dataPassword = useRef<HTMLInputElement>(null)
+
+
 
     // Buat fungsi untuk simpan data
     const setSaveData = () => {
@@ -29,6 +33,34 @@ export default function AddPage() {
             setErrorNamaVisible(false)
 
         }
+
+        // Untuk data Username
+        if(dataUsername.current?.value == "")
+        {
+            // tampilkan pesan error
+            setErrorUsernameVisible(true)
+        }
+        // jika komponen "Usernama" diisi
+        else
+        {
+            // sembunyikan pesan error
+            setErrorUsernameVisible(false)
+
+        }
+
+        // Untuk Paswword
+        if(dataPassword.current?.value == "")
+        {
+            // tampilkan pesan error
+            setErrorPasswordVisible(true)
+        }
+        // jika komponen "Password" diisi
+        else
+        {
+            // sembunyikan pesan error
+            setErrorPasswordVisible(false)
+
+        }
     }
 
     return (
@@ -44,7 +76,7 @@ export default function AddPage() {
 
             <fieldset className="fieldset">
                 <legend className="fieldset-legend">Username</legend>
-                <input type="text" className="input w-96" placeholder="Masukan Usernamer" />
+                <input ref={dataUsername} type="text" className="input w-96" placeholder="Masukan Usernamer" />
                 {
                     (errorUsernamaVisible == true) &&
                     <p className="label text-red-700">Username Harus Diisi !</p>
@@ -53,7 +85,7 @@ export default function AddPage() {
 
             <fieldset className="fieldset">
                 <legend className="fieldset-legend">Password</legend>
-                <input type="password" className="input w-96" placeholder="Masukan Password" />
+                <input ref={dataPassword} type="password" className="input w-96" placeholder="Masukan Password" />
                 {
                     (errorPasswordVisible == true) &&
                     <p className="label text-red-700">Password Harus Diisi !</p>

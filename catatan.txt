@@ -93,3 +93,7 @@ fontawosome :
 - Menerapkan useState hook kedalam pesan error
 - Membuat fungsi untuk simpan data
 - Membuat usRef untuk isisan data komponen
+
+# Pertemuan 26 Mei 2025
+- Lanjut untuk useRef pada komponen Username dan Password
+- 
