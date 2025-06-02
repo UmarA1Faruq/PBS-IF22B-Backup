@@ -102,3 +102,6 @@ fontawosome :
 # Pertemuan 2 Juni 2025
 - Lanjut mengerjakan bagian edit data
 - Membuat folder edit dalam frontend dan membuat file page.jsx didalamnya
+- Membuat layout dasar dari edit data
+- Copas hook dari add data
+- 
