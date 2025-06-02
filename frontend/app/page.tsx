@@ -62,7 +62,7 @@ export default function Home() {
               <tr className="hover:bg-cyan-100" key={item.id}>
                 <td className="text-center">
                   {/* buat tombol edit dan hapus */}
-                  <Link href={"/"} 
+                  <Link href={`/edit/${item.id}`} 
                   className="bg-blue-500 px-2.5 py-1.5 text-white">
                     <FontAwesomeIcon icon={faPencil} />
                   </Link>
