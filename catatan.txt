@@ -104,4 +104,5 @@ fontawosome :
 - Membuat folder edit dalam frontend dan membuat file page.jsx didalamnya
 - Membuat layout dasar dari edit data
 - Copas hook dari add data
-- 
+- Membuat fungsi untuk update data
+- Membuat usRef untuk isisan data komponen
